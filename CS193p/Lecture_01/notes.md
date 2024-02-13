@@ -1,6 +1,6 @@
 # Lecture 1
 
-## Video Notes
+# Video Notes
 
 We will not always 'import SwiftUI'.<br>
 We're going to separate out the UI from the backend and the logic.
@@ -56,4 +56,4 @@ View modifers scope matters.
 
 '**Rectangle()**' behaves like a Shape.
 
-## Reading Notes
+### Need to finish reading on functions, closures, enumerations, structures and classes, properties, methods, and initialization. 
