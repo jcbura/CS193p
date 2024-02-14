@@ -55,5 +55,3 @@ These kinds of functions are called **View Modifiers**.<br>
 View modifers scope matters.
 
 '**Rectangle()**' behaves like a Shape.
-
-### Need to finish reading on functions, closures, enumerations, structures and classes, properties, methods, and initialization. 
