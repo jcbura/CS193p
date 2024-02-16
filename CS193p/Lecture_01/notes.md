@@ -1,6 +1,8 @@
-# Lecture 1
+# Lecture 01 Video Notes
 
-# Video Notes
+### Link to the [Video Lecture](https://www.youtube.com/watch?v=n1qabtjZ_jg).
+
+___
 
 We will not always 'import SwiftUI'.<br>
 We're going to separate out the UI from the backend and the logic.
