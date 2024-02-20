@@ -132,7 +132,7 @@ But its actual name is **Type Parameter**.<br>
 
 ---
 
-**`protocol`**<br>
+**protocol**<br>
 A `protocol` is sort of a "stripped-down" `struct`/`class`.<br>
 It has `func`tions and `var`s, but no implementation (or storage)!<br>
 Declaring a `protocol` looks very similar to `struct` or `class` (just w/o implementation)...
