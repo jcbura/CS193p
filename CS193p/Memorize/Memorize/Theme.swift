@@ -13,46 +13,35 @@ struct Theme {
     var numberOfPairs: Int
     var color: String
     
+    var themeCount = 6
+    var themesDictionary: [Int: (String, [String], Int, String)] = [
+        1: ("Faces", ["😀", "🥹", "😂", "😇", "😍", "😛", "😎", "🥸", "😤", "🤯", "😶‍🌫️", "🫠", "🥱"], 12, "red"),
+        2: ("Animals", ["🐶", "🐱", "🐭", "🐰", "🦊", "🐻", "🐼", "🐯", "🦁", "🐮", "🐷", "🐸", "🐵"], 12, "orange"),
+        3: ("Foods", ["🍏", "🍎", "🍐", "🍊", "🍋", "🍌", "🍉", "🍇", "🍓", "🫐", "🍈", "🍒", "🍑"], 12, "yellow"),
+        4: ("Activities", ["⚽️", "🏀", "🏈", "⚾️", "🥎", "🎾", "🏐", "🏉", "🥏", "🎱", "🪀", "🏓", "🏸"], 12, "green"),
+        5: ("Places", ["🗾", "🎑", "🏞️", "🌅", "🌄", "🌠", "🎇", "🎆", "🌇", "🏙️", "🌃", "🌌", "🌉"], 12, "blue"),
+        6: ("Flags", ["🇺🇸", "🇪🇸", "🇬🇧", "🇫🇷", "🇮🇹", "🇲🇨", "🇦🇹", "🇧🇷", "🇳🇱", "🇹🇷", "🇦🇺", "🇸🇦", "🇦🇿"], 12, "purple")
+    ]
+    
     init() {
-        let randomTheme = Int.random(in: 1...6)
-        switch randomTheme {
-        case 1:
-            name = "Faces"
-            emoji = ["😀", "🥹", "😂", "😇", "😍", "😛", "😎", "🥸", "😤", "🤯", "😶‍🌫️", "🫠", "🥱"]
-            numberOfPairs = 10
-            color = "red"
-        case 2:
-            name = "Animals"
-            emoji = ["🐶", "🐱", "🐭", "🐰", "🦊", "🐻", "🐼", "🐯", "🦁", "🐮", "🐷", "🐸", "🐵"]
-            numberOfPairs = 10
-            color = "orange"
-        case 3:
-            name = "Foods"
-            emoji = ["🍏", "🍎", "🍐", "🍊", "🍋", "🍌", "🍉", "🍇", "🍓", "🫐", "🍈", "🍒", "🍑"]
-            numberOfPairs = 10
-            color = "yellow"
-        case 4:
-            name = "Activities"
-            emoji = ["⚽️", "🏀", "🏈", "⚾️", "🥎", "🎾", "🏐", "🏉", "🥏", "🎱", "🪀", "🏓", "🏸"]
-            numberOfPairs = 10
-            color = "green"
-        case 5:
-            name = "Places"
-            emoji = ["🗾", "🎑", "🏞️", "🌅", "🌄", "🌠", "🎇", "🎆", "🌇", "🏙️", "🌃", "🌌", "🌉"]
-            numberOfPairs = 10
-            color = "blue"
-        case 6:
-            name = "Flags"
-            emoji = ["🇺🇸", "🇪🇸", "🇬🇧", "🇫🇷", "🇮🇹", "🇲🇨", "🇦🇹", "🇧🇷", "🇳🇱", "🇹🇷", "🇦🇺", "🇸🇦", "🇦🇿"]
-            numberOfPairs = 10
-            color = "purple"
-        default:
-            // Should never reach default case.
+        let randomTheme = Int.random(in: 1...themeCount)
+        if let theme = themesDictionary[randomTheme] {
+            name = theme.0
+            emoji = theme.1
+            numberOfPairs = theme.2
+            color = theme.3
+            emoji.shuffle()
+        } else {
+            // Should never be the case.
             name = ""
             emoji = [""]
             numberOfPairs = 0
             color = ""
         }
-        emoji.shuffle()
+    }
+    
+    mutating func addTheme(name: String, emoji: [String], numberOfPairs: Int, color: String) {
+        themeCount+=1
+        themesDictionary[themeCount] = (name, emoji, numberOfPairs, color)
     }
 }
