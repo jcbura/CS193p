@@ -4,7 +4,8 @@
 
 ---
 
-**Separating "Logic and Data" from "UI"**<br>
+**Separating "Logic and Data" from "UI"**
+
 We call this logic and data our "Model"<br>
 It could be a struct or an SQL database or any combination of such things.<br>
 The UI is basically a "parameterizable" shell that the Model feeds and brings to life.<br>
@@ -13,7 +14,8 @@ The Model is where things like isFaceUp and cardCount would live (not in '@State
 
 ---
 
-**Model and UI**<br>
+**Model and UI**
+
 Connecting the Model to the UI<br>
 1. The Model could just be an @State in a View (minimal to no separation).
 2. The Model might only be accessible via a gatekeeper "View Model" class (full separation).
@@ -52,7 +54,8 @@ Calls Intent function -> modifies the Model.
 
 ---
 
-**Architecture**<br>
+**Architecture**
+
 Varieties of Types<br>
 * `struct`
 * `class`
@@ -96,7 +99,8 @@ So what's the difference between `struct` and `class`?
 
 ---
 
-**Generics**<br>
+**Generics**
+
 Sometimes we just don't care.<br>
 We don't know what type something is and we don't care.<br>
 But Swift is a strongly-typed language, so we don't use variables and such that are "untyped".<br>
@@ -132,7 +136,8 @@ But its actual name is **Type Parameter**.<br>
 
 ---
 
-**protocol**<br>
+**protocol**
+
 A `protocol` is sort of a "stripped-down" `struct`/`class`.<br>
 It has `func`tions and `var`s, but no implementation (or storage)!<br>
 Declaring a `protocol` looks very similar to `struct` or `class` (just w/o implementation)...
@@ -199,7 +204,8 @@ It's also another way to add a lot of functionality (via **extension**) based on
 
 ---
 
-**Functions as Types**<br>
+**Functions as Types**
+
 Functions are types.<br>
 You can declare a variable (or parameter to a `func` or whatever) to be of type "function".<br>
 The syntax for this includes the types of the arguments and return value.<br>

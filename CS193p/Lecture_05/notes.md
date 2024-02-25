@@ -19,7 +19,7 @@ enum FastFoodMenuItem {
 An `enum` is a value type (like `struct`), so it is coped as it is passed around.
 
 Associated Data<br>
-Each state can ( but doesn't have to) have its own "associated data" ...
+Each state can (but doesn't have to) have its own "associated data" ...
 ```Swift
 enum FastFoodMenuItem {
     case hamburger(numberOfPatties: Int)
@@ -125,7 +125,7 @@ enum FastFoodMenuItem {
     case cookie
 
     fun isIncludedInSpecialOrder(number: Int) -> Bool { }
-    var calories: Int { // switch on self and calculate caloric value here }
+    var calories: Int { /* switch on self and calculate caloric value here */ }
 }
 ```
 

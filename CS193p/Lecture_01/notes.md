@@ -26,7 +26,8 @@ If you satisfy this requirement, you get all the things a `View` knows how to do
 
 ---
 
-**Computed Protperty**<br>
+**Computed Protperty**
+
 There are properties within the struct.
 
 **some** - `var body: some View`<br>
@@ -36,21 +37,24 @@ Which `View`?<br>
 
 ---
 
-**Creating Instances of structs**<br>
+**Creating Instances of structs**
+
 `Image(systemName: "globe").imageScale(.large).foregroundColor(.orange)`<br>
 `Text("Hello CS193p!")`<br>
 Are both examples of `struct`s that behave like a `View`.<br>
 
 ---
 
-**Named Parameters**<br>
+**Named Parameters**
+
 **systemName** - `Image(systemName: "globe").imgaeScale(.large).foregroundColor(.orage)`<br>
 `systemName` is a named parameter.<br>
 If it were `Image(named: "#")...` then it looks in the assets named the string you've provided.
 
 ---
 
-**Parameter Defaults**<br>
+**Parameter Defaults**
+
 There are other defaults you could specify here but you'll take the default.<br>
 `VStack** {...}` is a `struct` that behaves like a `View` but it takes other "legos" and stacks them on top of eachother.<br>
 It could have `VStack (alignment: leading, spacing: 20) {...}` but instead it uses the defaults.<br>
@@ -59,7 +63,8 @@ What's really happening is `VStack (content: { ... })` but it's not needed.
 
 ---
 
-**ViewBuilder**<br>
+**ViewBuilder**
+
 The thing that turns the list into a tuple view is a ViewBuilder.
 
 `Image(systemNme: "globe").imageScale(.large).foregroundColor(.orange)` are functions.<br>
