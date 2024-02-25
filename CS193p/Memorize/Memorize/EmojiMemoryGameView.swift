@@ -10,14 +10,14 @@ import SwiftUI
 struct EmojiMemoryGameView: View {
     @ObservedObject var viewModel: EmojiMemoryGame
     
+    private let aspectRatio: CGFloat = 2/3
+    
     var body: some View {
         VStack {
             Text(viewModel.getTheme().name)
                 .font(.title)
-            ScrollView {
-                cards
-                    .animation(.default, value: viewModel.cards)
-            }
+            cards
+                .animation(.default, value: viewModel.cards)
             HStack {
                 newGameButton()
                 Spacer()
@@ -27,18 +27,16 @@ struct EmojiMemoryGameView: View {
         .padding()
     }
     
-    var cards: some View {
-        LazyVGrid(columns: [GridItem(.adaptive(minimum: 85), spacing: 0)], spacing: 0) {
-            ForEach(viewModel.cards) { card in
+    private var cards: some View {
+        AspectVGrid(viewModel.cards, aspectRatio: aspectRatio) { card in
                 CardView(card)
-                    .aspectRatio(2/3, contentMode: .fit)
                     .padding(4)
                     .onTapGesture {
                         viewModel.choose(card)
                     }
-            }.foregroundColor(viewModel.getTheme().color)
+            }
+            .foregroundColor(viewModel.getTheme().color)
         }
-    }
     
     func newGameButton() -> some View {
         Button (action: {
@@ -47,6 +45,7 @@ struct EmojiMemoryGameView: View {
             Text("New Game").font(.title2)
         })
     }
+}
     
     struct CardView: View {
         let card: MemoryGame<String>.Card
@@ -72,7 +71,6 @@ struct EmojiMemoryGameView: View {
             .opacity(card.isFaceUp || !card.isMatched ? 1 : 0)
         }
     }
-}
 
 #Preview {
     EmojiMemoryGameView(viewModel: EmojiMemoryGame())

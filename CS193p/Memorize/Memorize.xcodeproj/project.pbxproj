@@ -14,6 +14,7 @@
 		96506DC92B83CE44007590EA /* MemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96506DC82B83CE44007590EA /* MemoryGame.swift */; };
 		96506DCB2B83D025007590EA /* EmojiMemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96506DCA2B83D025007590EA /* EmojiMemoryGame.swift */; };
 		968B2D6F2B87B4FD00902018 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968B2D6E2B87B4FD00902018 /* Theme.swift */; };
+		9696667A2B8BBA74004A16B8 /* AspectVGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969666792B8BBA74004A16B8 /* AspectVGrid.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		96506DC82B83CE44007590EA /* MemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGame.swift; sourceTree = "<group>"; };
 		96506DCA2B83D025007590EA /* EmojiMemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMemoryGame.swift; sourceTree = "<group>"; };
 		968B2D6E2B87B4FD00902018 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		969666792B8BBA74004A16B8 /* AspectVGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AspectVGrid.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				96506DCA2B83D025007590EA /* EmojiMemoryGame.swift */,
 				963815A02B6D4B5F004EA2E8 /* MemorizeApp.swift */,
 				963815A22B6D4B5F004EA2E8 /* EmojiMemoryGameView.swift */,
+				969666792B8BBA74004A16B8 /* AspectVGrid.swift */,
 				963815A42B6D4B60004EA2E8 /* Assets.xcassets */,
 				963815A62B6D4B60004EA2E8 /* Preview Content */,
 			);
@@ -148,6 +151,7 @@
 			files = (
 				963815A32B6D4B5F004EA2E8 /* EmojiMemoryGameView.swift in Sources */,
 				963815A12B6D4B5F004EA2E8 /* MemorizeApp.swift in Sources */,
+				9696667A2B8BBA74004A16B8 /* AspectVGrid.swift in Sources */,
 				968B2D6F2B87B4FD00902018 /* Theme.swift in Sources */,
 				96506DC92B83CE44007590EA /* MemoryGame.swift in Sources */,
 				96506DCB2B83D025007590EA /* EmojiMemoryGame.swift in Sources */,
