@@ -188,4 +188,4 @@ It's not arbitrary code.
 
 `if-else` (or `switch` or `if let`) statements can be used to choose Views to include in the list.<br>
 You can also have local lets.<br>
-No other kinds of code is allowed (at least as of the tiem of this lecture).
+No other kinds of code is allowed (at least as of the time of this lecture).
